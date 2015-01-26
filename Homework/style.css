@@ -1,0 +1,32 @@
+.test {
+	background-color: #E3E1E6;
+}
+
+.instructions {
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+	font-family: sans-serif;
+	padding: 5em 0 5em 0;
+}
+
+#search-box, #search-button {
+display: block;
+margin: 0 auto;
+
+}
+#results {
+	height: 5em;
+	width: 20em;
+	border: 2px solid black;
+	margin-top: 8em;
+	display: block;
+	margin: 0 auto;
+}
+.resultText {
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+	font-family: sans-serif;
+	padding: 5em 0 5em 0;
+}
