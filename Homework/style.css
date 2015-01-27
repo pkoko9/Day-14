@@ -7,7 +7,7 @@
 	display: block;
 	margin: 0 auto;
 	font-family: sans-serif;
-	padding: 5em 0 5em 0;
+	padding: 2em 0 2em 0;
 }
 
 #search-box, #search-button {
@@ -17,9 +17,9 @@ margin: 0 auto;
 }
 #results {
 	height: 5em;
-	width: 20em;
+	width: 40em;
 	border: 2px solid black;
-	margin-top: 8em;
+	margin-top: 2em;
 	display: block;
 	margin: 0 auto;
 }
@@ -28,5 +28,5 @@ margin: 0 auto;
 	display: block;
 	margin: 0 auto;
 	font-family: sans-serif;
-	padding: 5em 0 5em 0;
+	padding: 2em 0 2em 0;
 }

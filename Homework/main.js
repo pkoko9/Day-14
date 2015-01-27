@@ -20,6 +20,37 @@ $(document).ready(onReady);
 
 // $(document).ready(onReady);
 
+// function onReady (searchInput) {
+
+// $('#search-button').on('click', onSearchButtonClick);
+
+// 	function onSearchButtonClick() {
+		
+// 		// console.log($('#search-box').val
+
+// 			myImdbSearch($('#search-box').val())
+// 	}
+// 	function myImdbSearch (query) {
+// 		$.get(
+// 			'http://www.omdbapi.com',
+// 			 {
+// 				s: query,
+// 			},
+// 		onSearchResults,
+// 		'json'
+// 	);
+
+// 	}
+// function onSearchResults (data) {
+// 	console.log(data);
+// }
+// }
+
+// 3. Update assignment 2 to display the response from IMDB in a table inside of the results box
+// (instead of console.log'ing it).
+
+$(document).ready(onReady);
+
 function onReady (searchInput) {
 
 $('#search-button').on('click', onSearchButtonClick);
@@ -43,8 +74,14 @@ $('#search-button').on('click', onSearchButtonClick);
 	}
 function onSearchResults (data) {
 	console.log(data);
+	$(data).html($('#data').val());
+
+
+
 }
 }
+
+
 
 
 
