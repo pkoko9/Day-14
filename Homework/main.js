@@ -1,4 +1,4 @@
-$(document).ready(onReady);
+
 // 1. Build a webpage that has three main elements: a search text box, a search button and a 
 // results box. When the user clicks on the search button, display the contents (value) of the 
 // search text box in the results box.
@@ -53,13 +53,13 @@ $(document).ready(onReady);
 
 function onReady (searchInput) {
 
-$('#search-button').on('click', onSearchButtonClick);
+	$('#search-button').on('click', onSearchButtonClick);
 
 	function onSearchButtonClick() {
 		
 		// console.log($('#search-box').val
 
-			myImdbSearch($('#search-box').val())
+		myImdbSearch($('#search-box').val());
 	}
 	function myImdbSearch (query) {
 		$.get(
@@ -67,20 +67,28 @@ $('#search-button').on('click', onSearchButtonClick);
 			 {
 				s: query,
 			},
-		onSearchResults,
-		'json'
-	);
+			onSearchResults,
+			'json'
+		);
 
 	}
-function onSearchResults (data) {
-	console.log(data);
-	$(data).html($('#data').val());
 
+	function onSearchResults (data) {
+		console.log(data);
 
+		for (var i=0; i<data.Search.length; i++){
+			var movieInfo=data.Search[i];
+			var newRow = makeRow(movieInfo);
+			$('#table').append(newRow);
+		} 
 
+		function makeRow(data){
+			console.log (data);
+			return '<tr><td>' + data.Title + '</td><td>' + data.Year + '</td>\
+			<td>'+ data.Type + '</td></tr>';
+		}
+	}
 }
-}
-
 
 
 
