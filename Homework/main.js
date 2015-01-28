@@ -49,6 +49,50 @@
 // 3. Update assignment 2 to display the response from IMDB in a table inside of the results box
 // (instead of console.log'ing it).
 
+// $(document).ready(onReady);
+
+// function onReady (searchInput) {
+
+// 	$('#search-button').on('click', onSearchButtonClick);
+
+// 	function onSearchButtonClick() {
+		
+// 		// console.log($('#search-box').val
+
+// 		myImdbSearch($('#search-box').val());
+// 	}
+// 	function myImdbSearch (query) {
+// 		$.get(
+// 			'http://www.omdbapi.com',
+// 			 {
+// 				s: query,
+// 			},
+// 			onSearchResults,
+// 			'json'
+// 		);
+
+// 	}
+
+// 	function onSearchResults (data) {
+// 		console.log(data);
+
+// 		for (var i=0; i<data.Search.length; i++){
+// 			var movieInfo=data.Search[i];
+// 			var newRow = makeRow(movieInfo);
+// 			$('#table').append(newRow);
+// 		} 
+
+// 		function makeRow(data){
+// 			console.log (data);
+// 			return '<tr><td>' + data.Title + '</td><td>' + data.Year + '</td>\
+// 			<td>'+ data.Type + '</td></tr>';
+// 		}
+// 	}
+// }
+
+//4.  Hard Mode: Update your results box to allow your user to click on a result to add it
+ // to another list of movies that they want to watch (their "to watch" list).
+
 $(document).ready(onReady);
 
 function onReady (searchInput) {
@@ -85,12 +129,23 @@ function onReady (searchInput) {
 		function makeRow(data){
 			console.log (data);
 			return '<tr><td>' + data.Title + '</td><td>' + data.Year + '</td>\
-			<td>'+ data.Type + '</td></tr>';
-		}
+			<td>'+ data.Type + '</td></tr>';	
+		}	
+
+		$('tr').click(function(){
+				console.log(this);
+				return $('#watchlist').append(this);
+			});	
 	}
+
+	// $('').on('click', watch);
+
+	// function watch (selected) {
+	// 	return '<tr><td>' + data.Title + '</td><td>' + data.Year + '</td>\
+	// 		<td>'+ data.Type + '</td></tr>';
+	// 		console.log (selected);
+	
+
 }
-
-
-
 
 
